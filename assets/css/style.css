@@ -63,8 +63,11 @@ a {
     z-index: 0;
 }
 .section2{
-    width: inherit;
-    height: inherit;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;    
+    justify-content: flex-start;
+    max-width: 960px;
     padding: 20px;
 }
 .header2 {
@@ -78,13 +81,11 @@ a {
     overflow: auto;
 }
 .content{
-    /*position: absolute;*/
     margin-top: 80px;
-    width: 910px;
-    height: inherit;
+    width: 100%;
+    height: auto;
 }
 #headshot{
-    /*position: absolute;*/
     float: left;
     height: 150px;
     width: 150px;
@@ -107,6 +108,15 @@ a {
 h4 {
     margin-top: 30px;
 }
+.form {
+    width: 960px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    z-index: 0;
+}
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -125,8 +135,18 @@ input[type=email], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
-input[type=submit] {
+textarea {
     width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 150px;
+}
+input[type=submit] {
+    width: 20%;
     color: #ffffff;
     background-color:#4aaaa5; 
     padding: 14px 20px;
@@ -138,4 +158,41 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #4aaaa0;
 }
-
+.content2{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;    
+    justify-content: flex-start;
+    max-width: 960px;
+    padding: 20px;
+}
+.images{
+    border: 1px solid #cccccc;
+    position: relative;
+    width: 300px;
+    margin: 10px;
+    padding: 0;
+}
+.image-name-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    top: 20%;
+    position: absolute;
+}
+.image-name{
+    background-color: #4aaaa5;
+    color: #ffffff;
+    flex: 1;
+    padding: 10px 0px 10px 0px;
+    font-size: 18px;
+    text-align: center;
+}
+.image-size{
+    width: 300px;
+    height: 150px;
+    margin: 0;
+    padding: 0px;
+}
